@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quiz Maker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Online Quiz Maker</h1>
+    </header>
+    <main>
+      <section id="quiz-creator">
+        <h2>Create a Quiz</h2>
+        <form id="quiz-form">
+          <div class="form-group">
+            <label for="quiz-title">Quiz Title:</label>
+            <input type="text" id="quiz-title" required>
+          </div>
+          <div class="form-group">
+            <label for="question">Question:</label>
+            <input type="text" id="question" required>
+          </div>
+
+          <div class="form-group">
+            <label for="option1">Option 1:</label>
+            <input type="text" id="option1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="option2">Option 2:</label>
+            <input type="text" id="option2" required>
+          </div>
+
+          <div class="form-group">
+            <label for="option3">Option 3:</label>
+            <input type="text" id="option3" required>
+          </div>
+
+          <div class="form-group">
+            <label for="option4">Option 4:</label>
+            <input type="text" id="option4" required>
+          </div>
+
+          <div class="form-group">
+            <label for="correct">Correct Answer:</label>
+            <select id="correct" required>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+              <option value="4">Option 4</option>
+            </select>
+          </div>
+
+          <button type="button" id="add-question" class="btn">Add Question</button>
+          <button type="button" id="save-quiz" class="btn">Save Quiz</button>
+        </form>
+      </section>
+
+      <section id="quiz-taker">
+        <h2>Take a Quiz</h2>
+        <div class="form-group">
+          <label for="select-quiz">Select Quiz:</label>
+          <select id="select-quiz"></select>
+        </div>
+        <button type="button" id="load-quiz" class="btn">Load Quiz</button>
+        <div id="quiz-questions"></div>
+        <button type="button" id="submit-quiz" class="btn" style="display: none;">Submit Quiz</button>
+        <div id="quiz-results"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
